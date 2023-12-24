@@ -198,9 +198,9 @@ function App() {
     })
     .catch( (err) => { 
       console.log(`Возникла ошибка при авторизации, ${err}`);
-      setMessage({ imgPath: error, text: 'Что-то пошло не так! Попробуйте ещё раз.' })
+      setMessage({ imgPath: error, text: 'Что-то пошло не так! Попробуйте ещё раз.' });
+      setIsInfoTooltipOpen(true)
     })
-    .finally(() => setIsInfoTooltipOpen(true))
   }
 
   // Функция регистрации пользователя (всплывает popup через Tooltip)
