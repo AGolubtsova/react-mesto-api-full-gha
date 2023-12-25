@@ -19,21 +19,19 @@ class Api {
     // Метод инициализации карточек с сервера
     getCards() {
       return this._sendRequest(`${this._url}/cards`, {
-   //         headers: this._headers
-            headers: {authorization: 'Bearer ' + localStorage.getItem("jwt"), ...this._headers},
+          headers: {authorization: 'Bearer ' + localStorage.getItem("jwt"), ...this._headers},
         });
     }
 
     // Метод добавления новой карточки на сервер
     createNewCard({name, link}) {
         return this._sendRequest(`${this._url}/cards`, {
-                method: "POST",
- //               headers: this._headers,
-                headers: {authorization: 'Bearer ' + localStorage.getItem("jwt"), ...this._headers},
-                body: JSON.stringify({
-                    name: name,
-                    link: link
-                })
+            method: "POST",
+            headers: {authorization: 'Bearer ' + localStorage.getItem("jwt"), ...this._headers},
+            body: JSON.stringify({
+                name: name,
+                link: link
+            })
         });
     }
 
@@ -42,56 +40,50 @@ class Api {
         return this._sendRequest(`${this._url}/cards/${id}`, {
             method: "DELETE",
             headers: {authorization: 'Bearer ' + localStorage.getItem("jwt"), ...this._headers},
-  //          headers: this._headers
         });
     }
 
     // Метод получения информации о пользователе с сервера
     getUserInfo() {
         return this._sendRequest(`${this._url}/users/me`, {
- //         headers: this._headers
-          headers: {authorization: 'Bearer ' + localStorage.getItem("jwt"), ...this._headers},
+            headers: {authorization: 'Bearer ' + localStorage.getItem("jwt"), ...this._headers},
         });
     }
 
     // Метод отправки данных пользователя на сервер
     sendUserInfo(userData) {
         return this._sendRequest(`${this._url}/users/me`, {
- //         headers: this._headers,
-          headers: {authorization: 'Bearer ' + localStorage.getItem("jwt"), ...this._headers},
-          method: 'PATCH',
-          body: JSON.stringify({ 
-            name: userData.name, 
-            about: userData.about 
-          })
+            headers: {authorization: 'Bearer ' + localStorage.getItem("jwt"), ...this._headers},
+            method: 'PATCH',
+            body: JSON.stringify({ 
+              name: userData.name, 
+              about: userData.about 
+            })
         });
     }
     
     addCardLike(id) {
         return this._sendRequest(`${this._url}/cards/${id}/likes`, {
-          method: 'PUT',
-  //        headers: this._headers
-          headers: {authorization: 'Bearer ' + localStorage.getItem("jwt"), ...this._headers},
+            method: 'PUT',
+            headers: {authorization: 'Bearer ' + localStorage.getItem("jwt"), ...this._headers},
         });
     }
 
     changeLikeCardStatus(cardId, isLiked) {
       return this._sendRequest(`${this._url}/cards/${cardId}/likes`, {
-        method: `${!isLiked ? 'DELETE' : 'PUT'}`,
-        headers: {authorization: 'Bearer ' + localStorage.getItem("jwt"), ...this._headers},
- //       headers: this._headers,
+          method: `${!isLiked ? 'DELETE' : 'PUT'}`,
+          headers: {authorization: 'Bearer ' + localStorage.getItem("jwt"), ...this._headers},
       })
     }
 
     handleUserAvatar(data) {
-        return this._sendRequest(`${this._url}/users/me/avatar`, {
+      return this._sendRequest(`${this._url}/users/me/avatar`, {
           method: 'PATCH',
- //         headers: this._headers,
           headers: {authorization: 'Bearer ' + localStorage.getItem("jwt"), ...this._headers},
           body: JSON.stringify({
             avatar: data.avatar,
           })
-        })
+      })
     }
 
     getAllNeededData() {
@@ -101,10 +93,8 @@ class Api {
 
 // Объявление экземпляра API
 const optionsApi = {
-  //url: 'https://mesto.nomoreparties.co/v1/cohort-75', 
   url: 'http://localhost:3000',
   headers: {
-  // authorization: '70f8a693-b9dd-448d-93df-9935ed4791fc',
         'Accept': "application/json",
         'Content-Type': "application/json"
   }
