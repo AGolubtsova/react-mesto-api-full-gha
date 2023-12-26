@@ -93,7 +93,7 @@ class Api {
 
 // Объявление экземпляра API
 const optionsApi = {
-  url: 'http://localhost:3000',
+  url: 'https://api.agolubtsova.mesto.nomoredomainsmonster.ru',
   headers: {
         'Accept': "application/json",
         'Content-Type': "application/json"

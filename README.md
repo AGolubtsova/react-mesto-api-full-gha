@@ -12,6 +12,6 @@
 
 IP-адрес x.x.x.x
 
-Frontend https://...
+Frontend https://agolubtsova.mesto.nomoredomainsmonster.ru
 
-Backend https://...
+Backend https://api.agolubtsova.mesto.nomoredomainsmonster.ru
