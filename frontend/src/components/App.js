@@ -207,7 +207,7 @@ function App() {
   const handleRegister = (password, email) => {
     return auth.register(password, email)
       .then((res) => {
-        setEmail(res.data.email);
+        setEmail(res.email);
         setMessage({ imgPath: success, text: 'Вы успешно зарегистрировались!' });
         navigate("/sign-in", { replace: true });
       })
@@ -295,3 +295,4 @@ function App() {
 }
 
 export default App;
+
