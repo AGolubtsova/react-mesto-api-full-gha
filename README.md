@@ -10,7 +10,7 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.129.73
 
 Frontend https://agolubtsova.mesto.nomoredomainsmonster.ru
 
