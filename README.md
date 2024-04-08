@@ -12,3 +12,22 @@
 Frontend https://agolubtsova.mesto.nomoredomainsmonster.ru
 
 Backend https://api.agolubtsova.mesto.nomoredomainsmonster.ru
+
+### Используемые технологии
+
+- Node.js;
+- nodemon;
+- Express;
+- cookie-parser;
+- MongoDB;
+- mongoose;
+- bcryptjs;
+- jsonwebtoken;
+- celebrate;
+- validator;
+- express-rate-limit;
+- helmet;
+- winston;
+- express-winston;
+- ESLint;
+
