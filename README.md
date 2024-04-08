@@ -9,8 +9,6 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.129.73
-
 Frontend https://agolubtsova.mesto.nomoredomainsmonster.ru
 
 Backend https://api.agolubtsova.mesto.nomoredomainsmonster.ru
